@@ -42,6 +42,10 @@ export default class RandomPlanet extends Component {
       .catch(this.onError);
   }
 
+  componentWillMount() {
+    clearInterval(this.interval)
+  }
+
   render() {
     const { planet, loading, error } = this.state;
 
